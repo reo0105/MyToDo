@@ -1,0 +1,39 @@
+.MyToDo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#taskInput {
+    margin-right: 10px;
+}
+
+#taskLists {
+    list-style-type: none;
+}
+
+#taskLists li {
+    display: flex;
+    align-items: center;
+}
+
+.endButton {
+    margin-left: 10px;
+}
+
+.deleteButton {
+    margin-left: 10px;
+}
+
+.endButtonDisable {
+  background-color: #65BBE9;
+  margin-left: 10px;
+}
+
+.doneToDo {
+  text-decoration: line-through;
+}
+
+.notDoneToDo {
+  text-decoration: none;
+}
