@@ -1,4 +1,5 @@
   
+//追加
 document.getElementById("addTaskButton").addEventListener("click", function() {
     const taskInput = document.getElementById("taskInput");
     const taskList = document.getElementById("taskLists");
@@ -11,11 +12,13 @@ document.getElementById("addTaskButton").addEventListener("click", function() {
     const p = document.createElement("p");
     p.innerHTML = taskText;
 
+    //完了ボタン
     const endButton = document.createElement("button");
     endButton.setAttribute('class', "endButton");
     endButton.innerHTML = "done";
     endButton.value = "Not Done";
 
+    //削除ボタン
     const deleteButton = document.createElement("button");
     deleteButton.setAttribute("class", "deleteButton");
     deleteButton.innerHTML = "delete";
@@ -27,6 +30,7 @@ document.getElementById("addTaskButton").addEventListener("click", function() {
     taskList.appendChild(taskItem);
     taskInput.value = "";
 
+    //完了ボタンのイベント
     endButton.addEventListener("click", function(e) {
         // e.preventDefault();
         if (endButton.value === "Not Done") {
@@ -39,7 +43,8 @@ document.getElementById("addTaskButton").addEventListener("click", function() {
             endButton.value = "Not Done";
         }
     });
-    
+
+    //削除ボタンのイベント
     deleteButton.addEventListener("click", function(e) {
         taskList.removeChild(this.closest("li"));
     });
